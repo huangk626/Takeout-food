@@ -79,6 +79,7 @@ public class UserController {
 
             queryWrapper.eq(User::getPhone,phone);
             User user = userService.getOne(queryWrapper);
+            System.out.println(user);
             // 未注册
             if (user == null){
                 // 构建保存实体
